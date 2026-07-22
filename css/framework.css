@@ -1,0 +1,56 @@
+/* Row class to hold columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px; /* to handle the padding of columns */
+}
+
+/* Default column class (full width on small screens) */
+.col {
+    padding: 0 15px;
+    box-sizing: border-box;
+    flex: 1 1 100%; /* Default to full width */
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.grid_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+.grid-skill{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.loder{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50px;
+    z-index: 999;
+}
+/* Medium screens: 50% width (2 columns) */
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 1 1 50%;
+    }
+}
+
+/* Large screens: 33.33% width (3 columns) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 1 1 33.33%;
+    }
+}
+
+/* Extra small screens: 100% width (1 column) */
+@media (max-width: 767px) {
+    .col-12 {
+        flex: 1 1 100%;
+    }
+}
